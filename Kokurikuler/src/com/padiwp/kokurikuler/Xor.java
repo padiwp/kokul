@@ -8,7 +8,7 @@ public class Xor {
 		for(int i = 0; i < pesan.length(); i++)
 			sb.append((char)(pesan.charAt(i) ^ key));
 		String result = sb.toString();
-		Log.i("Info","Proses Dua");
+		Log.i("Hasil",result);
 		return(result);
 	}
 }

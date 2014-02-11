@@ -4,5 +4,6 @@
     <string name="app_name">Kokurikuler</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Berubah Sekarang</string>
+    <string name="textview">TextView</string>
 
 </resources>
