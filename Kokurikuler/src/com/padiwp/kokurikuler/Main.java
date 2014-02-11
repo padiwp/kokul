@@ -2,14 +2,19 @@ package com.padiwp.kokurikuler;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 
 public class Main extends Activity {
+	
+	Xor xor = new Xor();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		Log.i("Info","Proses Satu");
+		xor.sandi("Terang Sekali", 'a');
 	}
 
 	@Override
