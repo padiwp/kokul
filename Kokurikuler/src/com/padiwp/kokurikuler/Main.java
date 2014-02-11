@@ -5,21 +5,17 @@ import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 public class Main extends Activity {
 	
 	Xor xor = new Xor();
-	//Button tombol;
+	Sms kirimsms = new Sms();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//Log.i("Info","Proses Satu");
-		//String sandi = xor.sandi("Terang Sekali", 'a');
-		//String terang = xor.sandi(sandi, 'a');
 	}
 
 	@Override
@@ -30,9 +26,17 @@ public class Main extends Activity {
 	}
 	
 	public void proses(View v) {
-		Log.i("Info","Proses Ditekan");
 		EditText pesan = (EditText) findViewById(R.id.editText1);
 		String Strpesan = pesan.getText().toString();
+		
+		EditText tujuan = (EditText) findViewById(R.id.editText2);
+		String Strtujuan = tujuan.getText().toString();
+		
+		Strpesan = xor.sandi(Strpesan, 'a');
+		
+		kirimsms.sendSMS(Strtujuan, Strpesan);
+		
+		Log.i("Info","Pesan : "+Strpesan+" dikirim ke :"+Strtujuan);
 		
 	}
 
