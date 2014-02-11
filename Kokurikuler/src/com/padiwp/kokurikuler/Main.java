@@ -26,17 +26,16 @@ public class Main extends Activity {
 	}
 	
 	public void proses(View v) {
+					
 		EditText pesan = (EditText) findViewById(R.id.editText1);
 		String Strpesan = pesan.getText().toString();
 		
 		EditText tujuan = (EditText) findViewById(R.id.editText2);
 		String Strtujuan = tujuan.getText().toString();
 		
-		Strpesan = xor.sandi(Strpesan, 'a');
-		
-		kirimsms.sendSMS(Strtujuan, Strpesan);
-		
-		Log.i("Info","Pesan : "+Strpesan+" dikirim ke :"+Strtujuan);
+		String Strsandi = xor.sandi(Strpesan, 'a');
+		kirimsms.sendSMS(Strtujuan, Strsandi);
+		Log.i("Info","Pesan : "+Strsandi+" dikirim ke :"+Strtujuan);
 		
 	}
 
