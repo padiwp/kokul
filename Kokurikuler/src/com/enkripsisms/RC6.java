@@ -1,4 +1,4 @@
-package com.padiwp.kokurikuler;
+package com.enkripsisms;
 
 public class RC6 {
 	

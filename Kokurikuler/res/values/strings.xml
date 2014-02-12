@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-
-    <string name="app_name">Kokurikuler</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Berubah Sekarang</string>
-    <string name="textview">TextView</string>
-
+    <string name="app_name">Aplikasi SMS Terenkripsi Kokul 2014</string>
+    <string name="secure_sms">KOKUL 2014</string>
+    <string name="todo">TODO</string>
+    <string name="kunci">Kunci</string>
+    <string name="hasil">Hasil</string>
+    
 </resources>
