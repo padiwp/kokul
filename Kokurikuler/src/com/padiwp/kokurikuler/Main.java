@@ -2,14 +2,14 @@ package com.padiwp.kokurikuler;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 
 public class Main extends Activity {
 	
-	Xor xor = new Xor();
+	//Xor xor = new Xor();
+	RC6 rc = new RC6();
 	Sms kirimsms = new Sms();
 
 	@Override
@@ -26,16 +26,18 @@ public class Main extends Activity {
 	}
 	
 	public void proses(View v) {
-					
+		
+		String Strkey = "Kunci";
+		
 		EditText pesan = (EditText) findViewById(R.id.editText1);
 		String Strpesan = pesan.getText().toString();
 		
 		EditText tujuan = (EditText) findViewById(R.id.editText2);
 		String Strtujuan = tujuan.getText().toString();
 		
-		String Strsandi = xor.sandi(Strpesan, 'a');
-		kirimsms.sendSMS(Strtujuan, Strsandi);
-		Log.i("Info","Pesan : "+Strsandi+" dikirim ke :"+Strtujuan);
+		byte[] Bytsandi = rc.encrypt(Strpesan.getBytes(), Strkey.getBytes());
+		
+		kirimsms.sendSMS(Strtujuan, Bytsandi.toString());
 		
 	}
 

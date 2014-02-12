@@ -61,7 +61,8 @@ public class Sms extends Activity {
     		}
     	
     	//nampilkan list view
-    	ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+    	@SuppressWarnings("unused")
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
     			android.R.layout.simple_list_item_1, listsms);
     	//setListAdapter(adapter);
     }
